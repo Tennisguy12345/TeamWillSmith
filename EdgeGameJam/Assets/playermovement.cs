@@ -1,35 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class playermovement : MonoBehaviour
 {
     public Rigidbody Player;
-    public GameObject nodoublejump;
-    private bool isgrounded;
+    public GameObject theCollision;
+    protected bool isgrounded;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (isgrounded == true)
-        {
-            
-            if (Input.GetButtonDown("Jump"))
-            {
-                Player.AddRelativeForce(new Vector3(0, 100000, 0));
-
-            }
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+
         if (Input.GetKey("d"))
             Player.transform.Translate(new Vector3(10, 0, 0));
         if (Input.GetKey("a"))
-            Player.transform.Translate(new Vector3(-10, 0, 0));
+        { Player.transform.Translate(new Vector3(-10, 0, 0)); }
+                Player.transform.Translate(new Vector3(-10, 0, 0));
+        if (isgrounded == true)
+        {
+            Debug.Log("you can now jump");
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                Player.AddRelativeForce(new Vector3(0, 100, 0));
+
+            }
+        }
 
 
     }
@@ -38,7 +39,7 @@ public class playermovement : MonoBehaviour
         if (theCollision.gameObject.name == "Grass Level")
         {
             isgrounded = true;
-            
+
         }
     }
     void OnCollisionExit(Collision theCollision)
