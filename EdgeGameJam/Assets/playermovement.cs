@@ -17,10 +17,16 @@ public class playermovement : MonoBehaviour
     {
 
         if (Input.GetKey("d"))
+        {
             Player.transform.Translate(new Vector3(10, 0, 0));
+        } 
         if (Input.GetKey("a"))
-        { Player.transform.Translate(new Vector3(-10, 0, 0)); }
-                Player.transform.Translate(new Vector3(-10, 0, 0));
+        {
+          Player.transform.Translate(new Vector3(-10, 0, 0));
+        }
+    }
+
+
         if (isgrounded == true)
         {
             Debug.Log("you can now jump");
