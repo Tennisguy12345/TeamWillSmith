@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/EdgeGameJam.unity
+    guid: 6d8a21a6cdf9840e9b70be189c07ea2f
   m_configObjects: {}
