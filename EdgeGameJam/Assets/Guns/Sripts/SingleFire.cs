@@ -53,7 +53,7 @@ public class SingleFire : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                GameObject bullet = Instantiate(projectile, Bullet, Quaternion.identity) as GameObject;
+                GameObject bullet = Instantiate(projectile, Bullet2.transform.position, Quaternion.identity) as GameObject;
                 bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 10);
                 Ammo += 1;
                 Destroy1 += 1;
