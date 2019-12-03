@@ -67,11 +67,11 @@ public class playermovement : MonoBehaviour
     {
         if (isgrounded == true)
         {
-            Debug.Log("you can now jump");
+            //Debug.Log("you can now jump");
 
             if (Input.GetButtonDown("Jump"))
             {
-                Player.AddRelativeForce(new Vector3(0, 100, 0));
+                Player.AddRelativeForce(new Vector3(0, 200, 0));
 
             }
         }
