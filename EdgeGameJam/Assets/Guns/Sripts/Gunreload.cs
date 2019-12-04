@@ -148,6 +148,7 @@ public class Gunreload : MonoBehaviour
         {
             appercontroll = 1;
             Mag.GetComponent<Renderer>().enabled = false;
+            transform.Translate(0, 0, 0.025f);
             Debug.Log("Big");
             Time3 = -1;
             rotatestop = 0;
@@ -233,6 +234,7 @@ public class Gunreload : MonoBehaviour
         }
         if (roataetime4 == 1 && rotatestop3 < 1 && rotatestop3 > -1)
         {
+           
             transform.Rotate(0.893001f, 0, 0);
         }
         if (roataetime4 == 2 && rotatestop3 < 1 && rotatestop3 > -1)
