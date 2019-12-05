@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,16 +12,17 @@ public class Ammottext : MonoBehaviour
     public GameObject textObject2;
     Text textField2;
 
+    Image crosshair;
+
     public int Ammo3;    // Start is called before the first frame update
     void Start()
     {
         textField2 = textObject2.GetComponent<Text>();
         textField = textObject.GetComponent<Text>();
-<<<<<<< HEAD
+
         crosshair = GetComponent<Image>();
         Ammo = 10;
-=======
->>>>>>> parent of 3443050... ImportantPUsh
+
     }
 
     // Update is called once per frame
