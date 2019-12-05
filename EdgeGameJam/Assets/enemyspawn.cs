@@ -1,14 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class enemyspawn : MonoBehaviour
 {
-    public Transform enemy; 
+    public Transform enemy;
+    public int amount = 30;
+    public float offset = 2; 
     // Start is called before the first frame update
     void Start()
     {
-        for 
+        Invoke("Afterwait", 2.0f);
     }
 
     // Update is called once per frame
@@ -16,4 +19,15 @@ public class enemyspawn : MonoBehaviour
     {
         
     }
-}
+    
+    void Afterwait()
+    {
+        for (int enemycount = 0; enemycount<amount; enemycount++)
+         {
+            Debug.Log(enemycount);
+            Instantiate(enemy, new Vector3(transform.position.x + (enemycount* offset), transform.position.y, transform.position.z), Quaternion.identity);
+            
+        }
+    }
+}   
+    

@@ -20,7 +20,7 @@ public class Enemyscript : MonoBehaviour
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(mytransform
             - transform.position), rotationSpeed * Time.deltaTime);
-        transform.position += transform.forward * Time.deltaTime * moveSpeed;
+        transform.position += transform.forward* Time.deltaTime * moveSpeed;
     }
 
 }
