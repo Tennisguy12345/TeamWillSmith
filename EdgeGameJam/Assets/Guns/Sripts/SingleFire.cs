@@ -40,18 +40,13 @@ public class SingleFire : MonoBehaviour
     public GameObject projectile;
     public GameObject Bullet2;
     public Vector3 Bullet;
-
-    public Transform Fire;
-
     public int Ammo;
     public int Ammo2;
     public int Ammo3;
     public int Destroy1;
     public int Destroy2;
-    
     void Update()
     {
-
         Bullet = Bullet2.transform.position;
 
         if (Ammo<10)
@@ -59,9 +54,7 @@ public class SingleFire : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 GameObject bullet = Instantiate(projectile, Bullet2.transform.position, Quaternion.identity) as GameObject;
-                bullet.transform.parent = Fire;
-                bullet.transform.localRotation = Quaternion.identity;
-                bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 20);
+                bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 10);
                 Ammo += 1;
                 Destroy1 += 1;
 

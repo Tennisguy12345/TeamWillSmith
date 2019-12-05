@@ -7,10 +7,6 @@ TagManager:
   - Bullet
   - Enemy
   - Ground
-  - Right
-  - Front
-  - Back
-  - Left
   layers:
   - Default
   - TransparentFX
