@@ -46,9 +46,8 @@ public class SingleFire : MonoBehaviour
     public int Ammo;
     public int Ammo2;
     public int Ammo3;
-    //public int Destroy1;
-    //public int Destroy2;
-    public int t;
+    public int Destroy1;
+    public int Destroy2;
     
     void Update()
     {
@@ -57,51 +56,25 @@ public class SingleFire : MonoBehaviour
 
         if (Ammo<10)
         {
-            if (t==0)
+            if (Input.GetButtonDown("Fire1"))
             {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    GameObject bullet = Instantiate(projectile, Bullet2.transform.position, Quaternion.identity) as GameObject;
-                    bullet.transform.parent = Fire;
-                    bullet.transform.localRotation = Quaternion.identity;
-                    bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 20);
-                    Ammo += 1;
-                    //Destroy1 += 1;
-
-
-                }
-            }
-           
-            //if (Destroy1 > 0)
-            //{
-            //    DoBigMath();
-            //}
-            //if (Destroy2 == 50)
-            //{
-            //    Destroy1 = 0;
-            //    Destroy2 = 0;
-            //}
-            if (t==0)
-            {
-                if (Input.GetButtonDown("Cheat"))
-                {
-                    t = 1;
-                    Debug.Log("chaeck");
-                }
-            }
-            if (t==1)
-            {
-                if (Input.GetKey(KeyCode.F))
-                {
-                    GameObject bullet = Instantiate(projectile, Bullet2.transform.position, Quaternion.identity) as GameObject;
-                    bullet.transform.parent = Fire;
-                    bullet.transform.localRotation = Quaternion.identity;
-                    bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 20);
-                    Ammo += 1;
-                }
+                GameObject bullet = Instantiate(projectile, Bullet2.transform.position, Quaternion.identity) as GameObject;
+                bullet.transform.parent = Fire;
+                bullet.transform.localRotation = Quaternion.identity;
+                bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 20);
+                Ammo += 1;
+                Destroy1 += 1;
 
             }
-
+            if (Destroy1 > 0)
+            {
+                DoBigMath();
+            }
+            if (Destroy2 == 50)
+            {
+                Destroy1 = 0;
+                Destroy2 = 0;
+            }
         }
         if (Input.GetButtonDown("Fire2"))
         {
@@ -123,9 +96,9 @@ public class SingleFire : MonoBehaviour
     {
         Ammo3 += 1;
     }
-    //void DoBigMath()
-    //{
-    //    Destroy2 += 1;
-    //}
+    void DoBigMath()
+    {
+        Destroy2 += 1;
+    }
 
 }

@@ -2038,6 +2038,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 267247482}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &2093565328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093565327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16bda53391d041c9b0edf01ec131b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textObject: {fileID: 696456664}
+  Ammo: 0
+  Ammo2: 0
+  textObject2: {fileID: 1501344971}
+  Ammo3: 0
+>>>>>>> parent of 6e126c1... IMportan
 --- !u!1001 &4422547489050175670
 PrefabInstance:
   m_ObjectHideFlags: 0
