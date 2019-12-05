@@ -78,7 +78,7 @@ public class playermovement : MonoBehaviour
     }
     void OnCollisionEnter(Collision theCollision)
     {
-        if (theCollision.gameObject.name == "Ground")
+        if (theCollision.gameObject.tag == "Ground")
         {
             isgrounded = true;
 
@@ -86,7 +86,7 @@ public class playermovement : MonoBehaviour
     }
     void OnCollisionExit(Collision theCollision)
     {
-        if (theCollision.gameObject.name == "Ground")
+        if (theCollision.gameObject.tag == "Ground")
         {
             isgrounded = false;
         }

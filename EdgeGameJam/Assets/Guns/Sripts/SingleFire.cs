@@ -46,36 +46,35 @@ public class SingleFire : MonoBehaviour
     public int Ammo3;
     public int Destroy1;
     public int Destroy2;
+    public int check;
 
     void Update()
     {
         Bullet = Bullet2.transform.position;
-
-        if (Ammo<10)
+        if (check==0)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Ammo < 10)
             {
-                GameObject bullet = Instantiate(projectile, Bullet2.transform.position, Quaternion.identity) as GameObject;
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    GameObject bullet = Instantiate(projectile, Bullet2.transform.position, Quaternion.identity) as GameObject;
 
-                bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 10);
+                    bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 10);
 
-                bullet.transform.parent = Fire;
-                bullet.transform.localRotation = Quaternion.identity;
-                bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 20);
+                    bullet.transform.parent = Fire;
+                    bullet.transform.localRotation = Quaternion.identity;
+                    bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 20);
 
-                Ammo += 1;
-                Destroy1 += 1;
+                    Ammo += 1;
+               
 
+                }
             }
-            if (Destroy1 > 0)
-            {
-                DoBigMath();
-            }
-            if (Destroy2 == 50)
-            {
-                Destroy1 = 0;
-                Destroy2 = 0;
-            }
+        
+        }
+        if (Ammo==10)
+        {
+            check = 1;
         }
         if (Input.GetButtonDown("Fire2"))
         {
@@ -90,7 +89,7 @@ public class SingleFire : MonoBehaviour
             Ammo = 0;
             Ammo2 = 0;
             Ammo3 = 0;
-
+            check = 0;
         }
     }
     void DoMath()
