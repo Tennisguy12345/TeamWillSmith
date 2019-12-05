@@ -254,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1464370868, guid: 778d93fddb7944435be7ff175a4a46c6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1464370868, guid: 778d93fddb7944435be7ff175a4a46c6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -262,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1464370868, guid: 778d93fddb7944435be7ff175a4a46c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 728856194, guid: 778d93fddb7944435be7ff175a4a46c6, type: 3}
       propertyPath: Fire
@@ -1426,7 +1426,6 @@ GameObject:
   - component: {fileID: 1282650422}
   - component: {fileID: 1282650421}
   - component: {fileID: 1282650420}
-  - component: {fileID: 1282650419}
   - component: {fileID: 1282650418}
   - component: {fileID: 1282650424}
   - component: {fileID: 1282650426}
@@ -1454,21 +1453,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1282650419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282650417}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dafc1288926740d0b21fb701db40169, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1261436196}
-  moveSpeed: 0
-  rotationSpeed: 5
 --- !u!65 &1282650420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2009,6 +1993,7 @@ MonoBehaviour:
   Ammo: 0
   Ammo2: 0
   textObject2: {fileID: 1501344971}
+  t: 0
   Ammo3: 0
 --- !u!1001 &4422547489050175670
 PrefabInstance:
