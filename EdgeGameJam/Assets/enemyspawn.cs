@@ -15,8 +15,12 @@ public class enemyspawn : MonoBehaviour
         Invoke("Afterwait", 2.0f);
 =======
     {
+<<<<<<< HEAD
         
 >>>>>>> 344305031437f4aa32c353eccce3cfa6e07f6734
+=======
+        for 
+>>>>>>> parent of 3443050... ImportantPUsh
     }
 
     // Update is called once per frame
