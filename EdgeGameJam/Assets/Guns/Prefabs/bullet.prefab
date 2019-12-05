@@ -50,7 +50,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 156400, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}
       propertyPath: m_Name
-      value: bullet (1) Variant
+      value: bullet
       objectReference: {fileID: 0}
     - target: {fileID: 156400, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}
       propertyPath: m_TagString
@@ -102,8 +102,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 486166, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}
       propertyPath: m_LocalScale.x
-<<<<<<< HEAD
-<<<<<<< HEAD
       value: 0.3012501
       objectReference: {fileID: 0}
     - target: {fileID: 486166, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}
@@ -113,28 +111,6 @@ PrefabInstance:
     - target: {fileID: 486166, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.3012501
-=======
-      value: 0.3512501
-      objectReference: {fileID: 0}
-    - target: {fileID: 486166, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3512501
-      objectReference: {fileID: 0}
-    - target: {fileID: 486166, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3512501
->>>>>>> parent of ffe3cab... Some weird stuff is happening, so edgegamejam and script scene file not included
-=======
-      value: 0.3512501
-      objectReference: {fileID: 0}
-    - target: {fileID: 486166, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3512501
-      objectReference: {fileID: 0}
-    - target: {fileID: 486166, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3512501
->>>>>>> parent of 3443050... ImportantPUsh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 129bd6b849c0ae841a989061340abe8f, type: 3}

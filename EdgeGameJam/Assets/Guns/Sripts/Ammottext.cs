@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,18 +11,16 @@ public class Ammottext : MonoBehaviour
     public int Ammo2;
     public GameObject textObject2;
     Text textField2;
-
     Image crosshair;
+    public int t;
 
     public int Ammo3;    // Start is called before the first frame update
     void Start()
     {
         textField2 = textObject2.GetComponent<Text>();
         textField = textObject.GetComponent<Text>();
-
         crosshair = GetComponent<Image>();
         Ammo = 10;
-
     }
 
     // Update is called once per frame
@@ -32,10 +30,30 @@ public class Ammottext : MonoBehaviour
         textField.text = Ammo.ToString() + " / 10";
         if (Ammo < 11&&Ammo>0)
         {
-            if (Input.GetButtonDown("Fire1"))
-            {
 
-                Ammo -= 1;
+            if (t==0)
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+
+                    Ammo -= 1;
+                }
+            }
+            if (t == 0)
+            {
+                if (Input.GetButtonDown("Cheat"))
+                {
+                    t = 1;
+                   
+                }
+            }
+            if (t == 1)
+            {
+                if (Input.GetKey(KeyCode.F))
+                {
+                    Ammo -= 1;
+                }
+
             }
         }
         if (Input.GetButtonDown("Fire2"))
