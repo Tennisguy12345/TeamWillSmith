@@ -10,10 +10,14 @@ public class Damage : MonoBehaviour
     public GameObject Enemy;
     void OnCollisionEnter(UnityEngine.Collision collision)
     {
-        if (collision.gameObject.tag == "Bullet")
+        if (Health>9)
         {
-            Health -= 10;
+            if (collision.gameObject.tag == "Bullet")
+            {
+                Health -= 10;
+            }
         }
+
 
     }
     void Update()
