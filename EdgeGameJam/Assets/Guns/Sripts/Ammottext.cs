@@ -30,31 +30,13 @@ public class Ammottext : MonoBehaviour
         textField.text = Ammo.ToString() + " / 10";
         if (Ammo < 11&&Ammo>0)
         {
-
-            if (t==0)
-            {
                 if (Input.GetButtonDown("Fire1"))
                 {
 
                     Ammo -= 1;
                 }
-            }
-            if (t == 0)
-            {
-                if (Input.GetButtonDown("Cheat"))
-                {
-                    t = 1;
-                   
-                }
-            }
-            if (t == 1)
-            {
-                if (Input.GetKey(KeyCode.F))
-                {
-                    Ammo -= 1;
-                }
+           
 
-            }
         }
         if (Input.GetButtonDown("Fire2"))
         {
