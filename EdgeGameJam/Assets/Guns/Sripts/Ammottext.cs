@@ -19,6 +19,7 @@ public class Ammottext : MonoBehaviour
         textField2 = textObject2.GetComponent<Text>();
         textField = textObject.GetComponent<Text>();
         crosshair = GetComponent<Image>();
+        Ammo = 10;
     }
 
     // Update is called once per frame
