@@ -12,7 +12,7 @@ public class Ammottext : MonoBehaviour
     public GameObject textObject2;
     Text textField2;
     Image crosshair;
-    public int t;
+    
 
     public int Ammo3;    // Start is called before the first frame update
     void Start()
