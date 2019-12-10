@@ -30,6 +30,7 @@ public class Gunreload : MonoBehaviour
     public float roataetime3;
     public Vector3 Start;
     public GameObject Start2;
+    public int reload;
 
 
     void DoMoreMath()
@@ -44,11 +45,16 @@ public class Gunreload : MonoBehaviour
     void Update()
     {
         Start = Start2.transform.position;
-        if (Input.GetButtonDown("Fire2"))
+        if (reload==0)
         {
-            Time3 = 0;
-            roataetime2 = 0;
-            rotatestop3 = 0;
+            if (Input.GetButtonDown("Fire2"))
+            {
+                Time3 = 0;
+                roataetime2 = 0;
+                rotatestop3 = 0;
+                reload = 1;
+            }
+
         }
 
         if (roataetime2 == 0 && Stop < 1)
@@ -269,12 +275,14 @@ public class Gunreload : MonoBehaviour
             roataetime3 = 1;
             roataetime4 = 0;
             Mag.transform.position = Start;
+            reload = 0;
         }
         if (appercontroll2==50&& appercontroll==1)
         {
             appercontroll2 = 0;
             appercontroll = 0;
             roataetime = 0;
+            
         }
 
     }
