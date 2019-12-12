@@ -11,6 +11,7 @@ TagManager:
   - Front
   - Back
   - Left
+  - transporter
   layers:
   - Default
   - TransparentFX
