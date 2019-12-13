@@ -35,7 +35,7 @@ public class DestroyCheck : MonoBehaviour
         }
         if (show > 100)
         {
-
+            Destroy(GameObject.Find("Plane (3)"));
             
             GameObject.Find("Text (TMP)").transform.localScale = new Vector3(1, 1, 1);
         }

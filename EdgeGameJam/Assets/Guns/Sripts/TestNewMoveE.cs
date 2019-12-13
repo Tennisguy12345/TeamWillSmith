@@ -14,7 +14,7 @@ public class TestNewMoveE : MonoBehaviour
     void Update()
     {
         transform.LookAt(player);
-        transform.Translate(0, 0, 0.015f);
+        transform.Translate(0, 0, 0.05f);
     }
 
 }
