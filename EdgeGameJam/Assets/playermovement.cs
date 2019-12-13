@@ -5,7 +5,8 @@ public class playermovement : MonoBehaviour
     public Rigidbody Player;
     public GameObject theCollision;
     public bool isgrounded;
-
+    public GameObject level2;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +84,12 @@ public class playermovement : MonoBehaviour
             isgrounded = true;
 
         }
+        if (theCollision.gameObject.tag == "transporter")
+        {
+            player.transform.position = level2.transform.position;
+            
+
+        }
     }
     void OnCollisionExit(Collision theCollision)
     {
@@ -91,4 +98,7 @@ public class playermovement : MonoBehaviour
             isgrounded = false;
         }
     }
-}
+    
+}   
+
+
