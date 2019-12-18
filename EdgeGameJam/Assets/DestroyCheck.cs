@@ -33,7 +33,7 @@ public class DestroyCheck : MonoBehaviour
             show += 1;
             Debug.Log("show");
         }
-        if (show > 100)
+        if (show > 500)
         {
             Destroy(GameObject.Find("Plane (3)"));
             
